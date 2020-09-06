@@ -32,28 +32,27 @@
     <div class="row align-items-center h-100">
         <div class="col-6 mx-auto">
             <div class="jumbotron">
-                <div class="btn-group">
+                <div class="btn-group p-1">
 
-                    <select type="button" class="btn btn-primary text-center " id="theFirst">
+                    <select type="button" class="btn btn-primary " id="theFirst">
                         <option>...from</option>
                     </select>
 
                 </div>
-                <div class="btn-group">
+                <div class="btn-group ">
 
-                    <select type="button" class="btn btn-primary text-center " id="theSecond">
+                    <select type="button" class="btn btn-primary " id="theSecond">
                         <option>...to</option>
                     </select>
 
                 </div>
-                <input id="money" type="number">
+                <input class="p-2" id="money" type="number" min="0" size="10" oninput="check(this)">
 
                 <button class="btn-info " id="convert">Go!</button>
 
                 <div class="text-center m-3" id="toValue"></div>
                 <div id="USD">United States dollar $ — 00,0000 rub.</div>
-                <div id="EUR">
-                    Euro € — 00,0000 rub.</div>
+                <div id="EUR">Euro € — 00,0000 rub.</div>
             </div>
         </div>
     </div>
