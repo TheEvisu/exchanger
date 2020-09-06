@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="script.js"></script>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+<div class="container h-100">
+    <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+            <div class="jumbotron">
+                <div class="btn-group">
+
+                    <select type="button" class="btn btn-primary " id="theFirst">
+                        <option>...from</option>
+                    </select>
+
+                </div>
+                <div class="btn-group">
+
+                    <select type="button" class="btn btn-primary " id="theSecond">
+                        <option>...to</option>
+                    </select>
+
+                </div>
+                <input id="money" type="number">
+
+                <button class="btn-info " id="convert">Go!</button>
+
+                <div class="text-center m-3" id="toValue"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
