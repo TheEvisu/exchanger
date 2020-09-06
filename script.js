@@ -39,23 +39,28 @@ button.onclick = () => {
         .then(data => {
             const res = document.createElement('h2');
             exchanger = data.rates;
-            for (let value in exchanger
-                ) {
+
+            for (let value in exchanger) {
                 if (value === from.value) {
                     theFirst = exchanger[value];
                 }
+
             }
-            for (let value in exchanger
-                ) {
+            for (let value in exchanger) {
                 if (value === to.value) {
                     theSecond = exchanger[value];
                 }
+
             }
 
             const total = (money.value / theFirst) * theSecond;
 
             if (total) {
-                res.appendChild(document.createTextNode(`${total.toFixed(2)} ${to.value}`));
+                if (to.value !== '...to') {
+                    res.appendChild(document.createTextNode(`${total.toFixed(4)} ${to.value}`));
+                } else {
+                    return 'Error';
+                }
             } else {
                 res.appendChild(document.createTextNode('Oops ... where is the meaning?'));
             }
@@ -69,3 +74,13 @@ button.onclick = () => {
         .catch(e => console.log(e));
 }
 
+function check(e) {
+
+
+    if (e.value < 0 || e.value > 10000000) {
+        e.value = '';
+    }
+
+    e.value = e.value.replace(/[^0-9.]/g, '');
+    e.value = e.value.replace(/(\..*)\./g, '$1');
+}
