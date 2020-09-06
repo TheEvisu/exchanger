@@ -1,4 +1,4 @@
-const baseUrl = 'http://data.fixer.io/api/latest?access_key=25ab1bb1b5af85de3a0e1b8e0ef0a17e';
+const baseUrl = 'https://www.cbr-xml-daily.ru/latest.js';
 
 const from = document.getElementById('theFirst');
 const to = document.getElementById('theSecond');
